@@ -47,6 +47,11 @@ header h1 {
   color: transparent;
 }
 
+header a {
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
 /* Signpost and directory */
 .signpost {
   height: clamp(30em, 80vw, 80vh);
