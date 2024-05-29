@@ -1,0 +1,125 @@
+html {
+  background-size: cover;
+}
+
+body {
+  background: linear-gradient(deepskyblue,white,green) no-repeat center fixed;
+  font-family: papyrus;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main logo for the websiite */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header {
+  height: max(12em, 30vh);
+}
+
+.header-container {
+  position: relative;
+  height: 100%;
+  width: min(80%, 400px);
+}
+
+.header-bg {
+  max-height: 100%;
+  width: 100%;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  width: 95%;
+  top: 55% !important;
+  background-image: linear-gradient(darkorchid,magenta,darkorchid);
+  background-clip: text;
+  color: transparent;
+}
+
+/* Signpost and directory */
+.signpost {
+  height: clamp(30em, 80vw, 80vh);
+  position: relative;
+}
+
+.signpost-leg {
+  height: 100%;
+  border: solid #5C3D20 1.5px;
+  width: 35px;
+  background: url("wood-pattern.png"), #BB936C;
+}
+
+.sign {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  border: solid #5C3D20 3px;
+  background: url("wood-pattern.png"), #BB936C;
+  height: 8em;
+  width: 20em;
+  line-height: 24px;
+}
+
+.sign1 {
+  top: 20%;
+}
+
+.sign2 {
+  top: 50%;
+}
+
+.sign3 {
+  top: 80%;
+}
+
+.sign p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.pointer {
+  font-size: 5em;
+}
+
+.sign1 img {
+  width: 70%;
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  object-fit: contain;
+  filter: sepia(100%);
+}
+
+.sign2 img {
+  width: 80%;
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  object-fit: contain;
+  filter: sepia(100%);
+}
+
+.sign3 img {
+  width: 70%;
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  object-fit: contain;
+  filter: sepia(100%);
+}
+
+/* Adjusting for screen size */
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+}

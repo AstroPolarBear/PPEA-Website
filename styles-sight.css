@@ -1,0 +1,117 @@
+/* Body CSS */
+.content {
+    background-image: url("paper-bg2.jpg");
+    background-size: cover;
+    width: min(60em, 95vw);
+    margin-top: 20px;
+}
+
+.box1 {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    width: inherit;
+    height: 100%;
+    border: solid 40px brown;
+    border-image: url(wooden-frame2.png) 20% round;
+    border-image-outset: 10px;
+    z-index: 10;
+    gap: 10px;
+}
+
+.superHeader {
+    font-weight: bold;
+    font-size: 2rem;
+    padding-bottom: 2px;
+    border-bottom: brown solid 3px;
+    margin-bottom: 5px;
+    color: brown;
+}
+
+.sight {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+    align-items: center;
+}
+
+.sight img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    grid-column: span 2;
+    border: pink groove 8px;
+    margin-bottom: 10px;
+}
+
+#al-ppe {
+    width: 55%;
+}
+
+.sight button {
+    border: brown solid 2px;
+    background-color: antiquewhite;
+    color: brown;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+.sight p {
+    text-align: left;
+    grid-row: 2;
+    grid-column: span 2;
+    border-bottom: brown solid 3px;
+}
+
+.next:hover, .back:hover {
+  border: brown solid 2px;
+  background-color: burlywood;
+  color: white;
+}
+
+.next:hover:active, .back:hover:active {
+  border: brown solid 2px;
+  background-color: burlywood;
+  color: white;
+}
+
+.next-disabled, .back-disabled {
+    opacity: 0.5;
+}
+
+.next, .next-disabled {
+    grid-row: 3;
+}
+
+.back, .back-disabled {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+/* Signpost and directory */
+.sign2 {
+    grid-template-columns: repeat(1,1fr);
+}
+
+/* Adjusting for screen size */
+@media screen and (max-width: 600px) {
+    .superHeader {
+        font-size: 3rem;
+    }
+
+    .box1 p {
+        font-size: 1.1rem;
+    }
+
+    .sight img {
+        width: 100%;
+    }
+
+    #al-ppe {
+        width: 100%;
+    }
+}

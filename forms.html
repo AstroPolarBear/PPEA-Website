@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link href="styles-forms.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Purple People Eater Awareness</title>
+    </head>
+
+    <body>
+          <!-- Logo -->
+          <header>
+            <div class="header-container center">
+              <img class="header-bg center" src="cloud.png">
+              <h1 class="center">Purple People Eater Awareness</h1>
+            </div>
+          </header>
+
+          <main>
+
+            <section class="content">
+
+                <div class="box1">
+
+                  <div class="superHeader" id="title"> Forms </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="q1">
+                    <label class="form-check-label" for="q1">
+                      Felt a random sense of impending doom.
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="q2">
+                    <label class="form-check-label" for="q2">
+                      Heard a gush of wind without indentifying its source.
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="q3">
+                    <label class="form-check-label" for="q3">
+                      Saw a dark figure that ended up being a pile of clothes.
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="q4">
+                    <label class="form-check-label" for="q4">
+                      Had the urge to consume more sweets.
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="q5">
+                    <label class="form-check-label" for="q5">
+                      Felt as light as a feather, with a tingle in your toes.
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="q6">
+                    <label class="form-check-label" for="q6">
+                      None
+                    </label>
+                  </div>
+
+                  <button class="submit" id="submit"> Submit </button>
+
+                  <div class="result" id="result0" style="display:none;">
+                    <p>Unless you are experiencing a symptom we have yet to know about, you are currently safe.</p>
+                  </div>
+
+                  <div class="result" id="result1">
+                    <p>A coincidence, you are most likely not being tracked!</p>
+                  </div>
+
+                  <div class="result" id="result2" style="display:none;">
+                    <p>You are most likely being tracked by a PPE at this very moment.<br>
+                       Continue onwards to the inquiry page and prepare yourself!</p>
+                  </div>
+
+                  <div class="result" id="result3" style="display:none;">
+                    <p>You are no longer being tracked by a PPE, you are already on their plate.<br>
+                       May it be quick, RIP.</p>
+                  </div>
+
+                </div>
+
+            </section>
+
+            <!-- Directory -->
+            <section class="signpost">
+
+              <div class="signpost-leg center"></div>
+
+              <a href="inquiries.html">
+                <button class="sign1 sign center">
+                  <p>INQUIRIES</p>
+                  <p class="pointer">&#9754;</p>
+                  <img src="question-icon.png">
+                </button>
+              </a>
+
+              <a href="sightings.html">
+                <button class="sign2 sign center">
+                  <p>SIGHTINGS</p>
+                  <p class="pointer">&#9754;</p>
+                  <img src="MAPICON.png">
+                </button>
+              </a>
+
+              <a href="index.html">
+                <button class="sign3 sign center">
+                  <p>BACK</p>
+                  <p class="pointer">&#9754;</p>
+                </button>
+              </a>
+
+            </section>
+          </main>
+
+          <script>
+
+            var submit = document.getElementById("submit");
+            var formList = document.querySelectorAll('.form-check-input');
+            var resultList = document.querySelectorAll('.result');
+
+            formList[5].addEventListener("click", function() {
+              if (formList[5].checked) {
+                for (let i = 0; i < formList.length - 1; i++) {
+                  formList[i].checked = false;
+                  formList[i].disabled = true;
+                }
+              } else {
+                for (let i = 0; i < formList.length - 1; i++) {
+                  formList[i].disabled = false;
+                }
+              }
+            });
+
+            submit.addEventListener("click", function() {
+              for (let i = 0; i < resultList.length; i++) {
+                resultList[i].style.display = 'none';
+              }
+
+              if (formList[4].checked) {
+                document.getElementById('result3').style.display = 'block';
+                return;
+              } else if (formList[5].checked) {
+                document.getElementById('result0').style.display = 'block';
+                return;
+              }
+
+              let counter = 0;
+              for (let i = 0; i < formList.length; i++) {
+                if (formList[i].checked) {
+                  counter++;
+                }
+              }
+
+              switch (counter) {
+                case 1:
+                case 2:
+                  document.getElementById('result1').style.display = 'block';
+                  break;
+                case 3:
+                case 4:
+                  document.getElementById('result2').style.display = 'block';
+                  break;
+              }
+            });
+
+          </script>
+
+    </body>
+</html>

@@ -1,0 +1,83 @@
+/* Body CSS */
+.content {
+  background-image: url("paper-bg2.jpg");
+  background-size: cover;
+  width: min(45em, 90vw);
+  margin-top: 20px;
+}
+
+.box1 {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  width: min(45em, 90vw);
+  height: 100%;
+  border: solid 40px brown;
+  border-image: url(wooden-frame2.png) 20% round;
+  border-image-outset: 10px;
+  z-index: 10;
+  color: brown;
+  gap: 10px;
+}
+
+.superHeader {
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 2px;
+  border-bottom: brown solid 3px;
+  margin-bottom: 5px;
+}
+
+.question {
+  border: brown solid 2px;
+  background-color: antiquewhite;
+  color: brown;
+  font-weight: bold;
+}
+
+.question:hover {
+  border: brown solid 2px;
+  background-color: burlywood;
+  color: white;
+}
+
+.question:hover:active {
+  border: brown solid 2px;
+  background-color: burlywood;
+  color: white;
+}
+
+.answer {
+  text-align: left;
+  border-bottom: burlywood solid 2px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  color: black;
+}
+
+#skittles-ppe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+/* Signpost and directory */
+.sign1 {
+  grid-template-columns: repeat(1,1fr);
+}
+
+/* Adjusting for screen size */
+@media screen and (max-width: 600px) {
+  .superHeader {
+    font-size: 3rem;
+  }
+
+  .box1 p {
+    font-size: 1.1rem;
+  }
+
+  #skittles-ppe {
+    width: 100%;
+  }
+}

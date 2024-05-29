@@ -1,0 +1,109 @@
+/* Body CSS */
+.content {
+  background-image: url("paper-bg2.jpg");
+  background-size: cover;
+  width: min(45em, 90vw);
+  margin-top: 20px;
+}
+
+.box1 {
+  display: grid;
+  text-align: left;
+  align-items: center;
+  width: min(45em, 90vw);
+  height: 100%;
+  border: solid 40px brown;
+  border-image: url(wooden-frame2.png) 20% round;
+  border-image-outset: 10px;
+  z-index: 10;
+  color: black;
+  gap: 10px;
+}
+
+.superHeader {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 2px;
+  border-bottom: brown solid 3px;
+  margin-bottom: 5px;
+  color: brown;
+}
+
+.form-check-input:checked{
+  background-color: mediumorchid !important;
+  border: 0;
+}
+
+.form-check-input:focus, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
+  color: black;
+  outline: 0;
+  border: 0;
+  box-shadow: 0 0 0 0.1rem darkmagenta !important;
+}
+
+.submit {
+  border: darkmagenta solid 2px;
+  background-color: antiquewhite;
+  color: purple;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit:hover {
+  background-color: mediumorchid;
+  color: white;
+}
+
+.submit:hover:active {
+  background-color: mediumorchid;
+  color: white;
+}
+
+.result {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 8px ridge peru;
+  width: min(100%, max-content);
+}
+
+.result p {
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#result0, #result1 {
+  background-color: Chartreuse;
+}
+
+#result2 {
+  background-color: gold;
+}
+
+#result3 {
+  color: white;
+  background-color: crimson;
+}
+
+/* Signpost and directory */
+.sign3 {
+  grid-template-columns: repeat(1,1fr);
+}
+
+/* Adjusting for screen size */
+@media screen and (max-width: 600px) {
+  .superHeader {
+    font-size: 3rem;
+  }
+  .box1 p {
+    font-size: 1.1rem;
+  }
+  #skittles-ppe {
+    width: 100%;
+  }
+}
