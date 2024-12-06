@@ -62,7 +62,7 @@ header a {
   height: 100%;
   border: solid #5C3D20 1.5px;
   width: 35px;
-  background: url("wood-pattern.png"), #BB936C;
+  background: url("../images/wood-pattern.webp"), #BB936C;
 }
 
 .sign {
@@ -71,7 +71,7 @@ header a {
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
   border: solid #5C3D20 3px;
-  background: url("wood-pattern.png"), #BB936C;
+  background: url("../images/wood-pattern.webp"), #BB936C;
   height: 8em;
   width: 20em;
   line-height: 24px;
